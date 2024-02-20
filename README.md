@@ -1,5 +1,7 @@
 # SwiftUI Admob Rehberi
 
+[<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Google_AdMob_logo.svg/1280px-Google_AdMob_logo.svg.png">](https://durmaz.notion.site/SwiftUI-Admob-Rehberi-0b531e7be21f4d83a37214c62d2cc637 "SwiftUI Admob Guide")
+
 1. **Admob SDK Kurulumu**
     1. SPM ile Xcode → Add Package Dependencies
         
