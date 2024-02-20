@@ -234,7 +234,7 @@
                 // Admob SDK
                 GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [ "c458ae01182d2fad3701091c1e7991e0" ]
                 GADMobileAds.sharedInstance().start(completionHandler: nil)
-        				// Test cihazı kullanacaksanız start metodundan önce çağırmalısınız.
+                // Test cihazı kullanacaksanız start metodundan önce çağırmalısınız.
             }
             
             var body: some Scene {
@@ -494,9 +494,9 @@
         var body: some View {
             VStack{
                 Text("Merhaba ADMOB!")
-    						BannerView()
-    							.frame(width: GADAdSizeBanner.size.width,
-    										height: GADAdSizeBanner.size.height)
+                    BannerView()
+                        .frame(width: GADAdSizeBanner.size.width,
+                                    height: GADAdSizeBanner.size.height)
             }      
         }
     }
@@ -514,9 +514,9 @@
         var body: some View {
             VStack{
                 Text("Merhaba ADMOB!")
-    						Button("Reklam Göster"){
-    							adCoordinator.presentAd()
-    						}
+                    Button("Reklam Göster"){
+                        adCoordinator.presentAd()
+                }
             }      
         }
     }
