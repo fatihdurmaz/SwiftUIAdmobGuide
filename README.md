@@ -1,4 +1,8 @@
 # SwiftUI Admob Rehberi
+![Swift](https://img.shields.io/badge/Swift-5.9-orange.svg)
+![Platform](https://img.shields.io/badge/Platform-iOS17%20-red.svg)
+![Platform](https://img.shields.io/badge/SwiftUI-4-green.svg)
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
 [<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Google_AdMob_logo.svg/1280px-Google_AdMob_logo.svg.png">](https://durmaz.notion.site/SwiftUI-Admob-Rehberi-0b531e7be21f4d83a37214c62d2cc637 "SwiftUI Admob Guide")
 
