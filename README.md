@@ -371,12 +371,12 @@
     
     Contains methods within a class in the AdMob iOS SDK that implements the **`GADBannerViewDelegate`** protocol. These methods are used to receive notifications about the status and interaction of the Google AdMob advertising banner:
     
-    1. **`bannerViewDidReceiveAd(_ bannerView: GADBannerView)`**: Banner reklamın başarıyla alındığı ve görüntülendiği zaman bu metot çağrılır.
-    2. **`bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error)`**: Banner reklamın yüklenme işlemi başarısız olduğunda bu metot çağrılır. Bir hata nesnesi, hata hakkında daha fazla bilgi sağlar.
-    3. **`bannerViewDidRecordImpression(_ bannerView: GADBannerView)`**: Banner reklamın bir izlenim kaydedildiğinde bu metot çağrılır. Banner reklamın görüntülendiği her bir defa bu metot tetiklenir.
-    4. **`bannerViewWillPresentScreen(_ bannerView: GADBannerView)`**: Banner reklamın tam ekran bir sayfa veya ekranın bir bölümüyle örtüştüğü bir ekranın sunulması öncesinde bu metot çağrılır. Örneğin, bir kullanıcı reklama tıkladığında ve uygulama bir tarayıcı ekranı veya başka bir uygulama ekranı açtığında bu metot tetiklenir.
-    5. **`bannerViewWillDismissScreen(_ bannerView: GADBannerView)`**: Banner reklamın tam ekran bir sayfa veya ekranın örtüştüğü ekranın kapatılması öncesinde bu metot çağrılır.
-    6. **`bannerViewDidDismissScreen(_ bannerView: GADBannerView)`**: Banner reklamın tam ekran bir sayfa veya ekranın örtüştüğü ekranın kapatılması sonrasında bu metot çağrılır. Bu metot, reklam ekranının kapatılması işleminin tamamlandığını belirtir.
+    1. **`bannerViewDidReceiveAd(_ bannerView: GADBannerView)`**: Called when a banner ad is received and displayed.
+    2. **`bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error)`**: Called when a banner ad fails to load and specifies the error.
+    3. **`bannerViewDidRecordImpression(_ bannerView: GADBannerView)`**: Called when an impression is recorded for a banner ad.
+    4. **`bannerViewWillPresentScreen(_ bannerView: GADBannerView)`**: Called when a banner ad is about to cover the screen after being clicked.
+    5. **`bannerViewWillDismissScreen(_ bannerView: GADBannerView)`**: Called before a banner ad's full-screen content is dismissed.
+    6. **`bannerViewDidDismissScreen(_ bannerView: GADBannerView)`**: Called after a banner ad's full-screen content is dismissed.
     
 4. **Interstitial ADS:**
     
@@ -449,12 +449,12 @@
     
    The **`GADFullScreenContentDelegate`** methods in the AdMob iOS SDK are used to track events related to the delivery of full-screen content by the ad publisher and user interaction. Its functions are as follows:
     
-    1. **`adDidRecordImpression(_ ad: GADFullScreenPresentingAd)`**: Reklam gösterim olayının kaydedildiği zaman bu metot çağrılır. Bir reklamın izlenme sayısı gibi metriklerin takibi için kullanılabilir.
-    2. **`adDidRecordClick(_ ad: GADFullScreenPresentingAd)`**: Kullanıcının reklama tıkladığı zaman bu metot çağrılır. Kullanıcıların reklamla etkileşimlerinin takibi için kullanılabilir.
-    3. **`ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error)`**: Tam ekran içeriğin sunulamadığı bir hata oluştuğunda bu metot çağrılır. Örneğin, reklam yüklenirken bir ağ hatası oluşabilir.
-    4. **`adWillPresentFullScreenContent(_ ad: GADFullScreenPresentingAd)`**: Tam ekran içeriğin gösterilmeye başlanmadan önce bu metot çağrılır. Uygulamanın gerektiği gibi durumunu ayarlamak için kullanılabilir.
-    5. **`adWillDismissFullScreenContent(_ ad: GADFullScreenPresentingAd)`**: Tam ekran içeriğin kullanıcı tarafından kapatılmadan önce bu metot çağrılır. Kullanıcı reklamı kapatmaya karar verirse, bu olay tetiklenir.
-    6. **`adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd)`**: Tam ekran içeriğin kullanıcı tarafından kapatıldıktan sonra bu metot çağrılır. Reklamı kapatma işlemi tamamlandığında kullanılabilir.
+    1. **`adDidRecordImpression(_ ad: GADFullScreenPresentingAd)`**: Called when an impression is recorded for an interstitial ad.
+    2. **`adDidRecordClick(_ ad: GADFullScreenPresentingAd)`**: Called when a click is recorded for an interstitial ad.
+    3. **`ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error)`**: Called when an interstitial ad fails to present its full-screen content and specifies the error.
+    4. **`adWillPresentFullScreenContent(_ ad: GADFullScreenPresentingAd)`**: Called before an interstitial ad's full-screen content is presented.
+    5. **`adWillDismissFullScreenContent(_ ad: GADFullScreenPresentingAd)`**: Called before an interstitial ad's full-screen content is dismissed.
+    6. **`adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd)`**: Called after an interstitial ad's full-screen content is dismissed.
     
     These methods allow for better control of full-screen ads by the publisher and tracking of user interactions. In this way, the performance of ads and user experience can be optimized.
     
