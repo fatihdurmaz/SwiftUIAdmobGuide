@@ -314,8 +314,10 @@
         func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
             guard viewWidth != .zero else { return }
             
-            bannerView.adSize = GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(viewWidth)
-            bannerView.load(GADRequest())
+				let request = GADRequest()
+				// iPad'lerde adaptif reklam boyutları için
+                request.scene = UIApplication.shared.connectedScenes.first as? UIWindowScene
+                bannerView.load(request)
         }
         
         func makeCoordinator() -> Coordinator {
@@ -391,8 +393,11 @@
         }
         
         func loadAd() {
+            let request = GADRequest()
+            request.scene = UIApplication.shared.connectedScenes.first as? UIWindowScene
+        
             GADInterstitialAd.load(
-                withAdUnitID: "ca-app-pub-xxxx", request: GADRequest()
+                withAdUnitID: "ca-app-pub-xxxx", request: request
             ) { ad, error in
                 if let error = error {
                     return print("Failed to load ad with error: \(error.localizedDescription)")
