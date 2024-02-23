@@ -500,12 +500,17 @@
     import GoogleMobileAds
     
     struct ContentView: View {
+        var width: CGFloat = UIScreen.main.bounds.width
+    
+	var size: CGSize {
+		return GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(width).size
+	} // adaptif reklam boyutları için (iPad uyumluluğu için)
+
         var body: some View {
             VStack{
                 Text("Merhaba ADMOB!")
                     BannerView()
-                        .frame(width: GADAdSizeBanner.size.width,
-                                    height: GADAdSizeBanner.size.height)
+                        .frame(height: size.height)
             }      
         }
     }
@@ -518,7 +523,7 @@
     import GoogleMobileAds
     
     struct ContentView: View {
-    		private let adCoordinator = AdCoordinator()
+    	private let adCoordinator = AdCoordinator()
     
         var body: some View {
             VStack{
