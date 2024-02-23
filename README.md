@@ -314,8 +314,8 @@
         func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
             guard viewWidth != .zero else { return }
             
-				let request = GADRequest()
-				// iPad'lerde adaptif reklam boyutları için
+		let request = GADRequest()
+		// iPad'lerde adaptif reklam boyutları için
                 request.scene = UIApplication.shared.connectedScenes.first as? UIWindowScene
                 bannerView.load(request)
         }
